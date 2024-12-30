@@ -28,7 +28,7 @@ export default function Home() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center p-4 border-b">
-              <h5 className="text-lg font-semibold bg-gray-500">HNY 🐝🐝</h5>
+              <h5 className="text-lg font-semibold text-gray-800">HNY 🐝🐝</h5>
               <button
                 className="text-gray-500 hover:text-gray-700"
                 onClick={() => setIsModalOpen(false)}
