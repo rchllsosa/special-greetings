@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMoreModalOpen, setIsMoreModalOpen] = useState(false);
+  const [isMssgModalOpen, setIsMssgModalOpen] = useState(false);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
@@ -56,7 +57,7 @@ export default function Home() {
                   setIsMoreModalOpen(true);
                 }}
               >
-                Click this for more 😉
+                Next
               </button>
             </div>
           </div>
@@ -76,6 +77,9 @@ export default function Home() {
               <h5 className="text-lg text-gray-800 font-semibold">
                 More Fun 🎊
               </h5>
+              <span className="text-md text-gray-600">
+                Wala lang gusto ko lang isali to haha
+              </span>
               <button
                 className="text-gray-500 hover:text-gray-700"
                 onClick={() => setIsMoreModalOpen(false)}
@@ -94,6 +98,54 @@ export default function Home() {
                 className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
                 onClick={() => {
                   setIsMoreModalOpen(false);
+                }}
+              >
+                Back
+              </button>
+              <button
+                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                onClick={() => {
+                  setIsMoreModalOpen(false);
+                  setIsMssgModalOpen(true);
+                }}
+              >
+                Click this for more 😉
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {isMssgModalOpen && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+          onClick={() => setIsMssgModalOpen(false)}
+        >
+          <div
+            className="bg-white rounded-lg shadow-lg w-11/12 max-w-md"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center p-4 border-b">
+              <h5></h5>
+              <button
+                className="text-gray-500 hover:text-gray-700"
+                onClick={() => setIsMssgModalOpen(false)}
+              >
+                &times;
+              </button>
+            </div>
+            <div className="px-4">
+              <span className="text-lg text-gray-600">
+                🌈 May the new year bring brighter days, bigger dreams, and
+                beautiful beginnings to you. Happy New Year, Jazzy (bebi)!
+                🎇💫💙
+              </span>
+            </div>
+            <div className="flex justify-end p-4 border-t">
+              <button
+                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+                onClick={() => {
+                  setIsMssgModalOpen(false);
                 }}
               >
                 Close
