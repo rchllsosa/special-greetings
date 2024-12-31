@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -136,10 +137,21 @@ export default function Home() {
             </div>
             <div className="px-4">
               <span className="text-lg text-gray-600">
-                🌈 May the new year bring brighter days, bigger dreams, and
-                beautiful beginnings to you. Happy New Year, Jazzy (bebi)!
-                🎇💫💙
+                🌈 Thanks for making my 2024 more extra special, bebi. I’m so
+                grateful that I met such a wonderful and vvv understanding girl like you
+                this year. May the new year bring brighter days, bigger dreams,
+                and beautiful beginnings to you. Happy New Year, Jazzy my love! 🎇💫💙
               </span>
+              <center>
+                <Image
+                  src="/for-you-flowers.gif"
+                  alt="Next.js logo"
+                  width={300}
+                  height={300}
+                  priority
+                />
+                <span className="text-gray-500">I loveee youuu –Rachelle</span>
+              </center>
             </div>
             <div className="flex justify-end p-4 border-t">
               <button
