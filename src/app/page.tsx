@@ -150,7 +150,7 @@ export default function Home() {
                   height={300}
                   priority
                 />
-                <span className="text-gray-500">Padaba taka –Rachelle</span>
+                <span className="text-gray-500">Padaba taka</span>
               </center>
             </div>
             <div className="flex justify-end p-4 border-t">
